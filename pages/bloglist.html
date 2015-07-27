@@ -1,0 +1,16 @@
+
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Blog List</h3>	
+            <ul class="list-group">	 
+                <div ng-repeat="nodeItem in node">
+                    <li class="list-group-item">
+                      <a href="{{nodeItem.uri}}">{{ nodeItem.title }}</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div class="col-md-9">
+		  <h3>Article</h3>
+        </div>
+    </div>

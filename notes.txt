@@ -1,0 +1,9 @@
+	<div class="container"> 
+		<div ng-controller="MainController">
+		 
+		<div ng-repeat="nodeItem in node">
+		<div class="well">
+		  {{ nodeItem.title }}
+		</div>
+	</div>
+	</div>
