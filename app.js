@@ -5,34 +5,32 @@
 
     // configure our routes
     blog.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        
-		$urlRouterProvider.otherwise('/');
+
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('home', {
-            	url : '/home',
+                url : '/home',
                 templateUrl : 'pages/bloglist.html',
-                controller  : 'blogListController',
-                service :   'blogListService'
+                controller  : 'BlogListController'
             })
             .state('blogs', {
-            	url : '/blogs',
+                url : '/blogs',
                 templateUrl : 'pages/bloglist.html',
-                controller  : 'blogListController',
-                service :   'blogListService'
+                controller  : 'BlogListController'
             })
             .state('about', {
-            	url : '/about',
+                url : '/about',
                 templateUrl : 'pages/aboutme.html',
                 //controller  : 'aboutController'
             })
             .state('cv', {
-            	url : '/cv',
+                url : '/cv',
                 templateUrl : 'pages/cv.html',
                 //controller  : 'cvController'
             })
             .state('contact', {
-            	url : '/contact',
+                url : '/contact',
                 templateUrl : 'pages/contactme.html',
                 //controller  : 'contactController'
             });

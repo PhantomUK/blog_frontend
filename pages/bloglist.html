@@ -1,9 +1,9 @@
-
+<div ng-controller="BlogListController">
     <div class="row">
         <div class="col-md-3">
-            <h3>Blog List</h3>	
-            <ul class="list-group">	 
-                <div ng-repeat="nodeItem in node">
+            <h3>List 1</h3>
+            <ul class="list-group">
+                <div ng-repeat="nodeItem in blog_list">
                     <li class="list-group-item">
                       <a href="{{nodeItem.uri}}">{{ nodeItem.title }}</a>
                     </li>
@@ -11,6 +11,7 @@
             </ul>
         </div>
         <div class="col-md-9">
-		  <h3>Article</h3>
+          <h3>Article 1</h3>
         </div>
     </div>
+</div>
