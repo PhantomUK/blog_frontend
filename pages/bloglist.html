@@ -1,17 +1,19 @@
 <div ng-controller="BlogListController">
     <div class="row">
         <div class="col-md-3">
-            <h3>List 1</h3>
+            <h3>Article List</h3>
             <ul class="list-group">
                 <div ng-repeat="nodeItem in blog_list">
                     <li class="list-group-item">
-                      <a href="{{nodeItem.uri}}">{{ nodeItem.title }}</a>
+                      <div ng-click="getNid(nodeItem)">{{ nodeItem.title }}</div>
                     </li>
                 </div>
             </ul>
         </div>
         <div class="col-md-9">
-          <h3>Article 1</h3>
+          <h3>{{getNid.title}}</h3>
+            <hr/>
+            {{getNid.body}}
         </div>
     </div>
 </div>
