@@ -4,16 +4,16 @@
             <h3>Article List</h3>
             <ul class="list-group">
                 <div ng-repeat="nodeItem in blog_list">
-                    <li class="list-group-item">
-                      <div ng-click="getNid(nodeItem)">{{ nodeItem.title }}</div>
+                    <li ng-click="getNid(nodeItem)" class="list-group-item">
+                      <div>{{ nodeItem.title }}</div>
                     </li>
                 </div>
             </ul>
         </div>
         <div class="col-md-9">
-          <h3>{{getNid.title}}</h3>
-            <hr/>
-            {{getNid.body}}
+          <h3>{{article.title}}</h3>
+            <hr ng-show="article.title.length > 0" />
+            {{article.body}}
         </div>
     </div>
 </div>

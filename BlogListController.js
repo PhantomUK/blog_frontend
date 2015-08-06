@@ -10,22 +10,18 @@
         };
 
         var onBlogArticleComplete = function(data) {
-            $scope.blog_article = data;
+            $scope.article = {
+                title: data.title,
+                body: $sce.trustAsHtml(data.body.und[0].value)
+            }
         };
 
         blogAPI.getBlogList().then(onBlogListComplete);
 
         $scope.getNid = function(nodeItem) {
             return blogAPI.getBlogArticle(nodeItem.nid).then(onBlogArticleComplete);
-        }
-
-        return {
-             getNid: $scope.getNid
-        }
+        };
 
     }]);
 
 })();
-
-
-//$sce.trustAsHtml(
