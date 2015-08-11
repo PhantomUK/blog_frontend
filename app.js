@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-    var blog = angular.module('myblog', ['ui.router']);
+    var blog = angular.module('myblog', ['ui.router', 'angular-loading-bar']);
 
     // configure our routes
     blog.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
