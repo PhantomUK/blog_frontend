@@ -35,7 +35,6 @@
   -moz-transition: width 350ms;
   -o-transition: width 350ms;
   transition: width 350ms;
-
   background: #dd0400;
   position: fixed;
   z-index: 10002;

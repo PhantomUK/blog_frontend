@@ -1,0 +1,20 @@
+<div ng-controller="BlogListController">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Article List  ({{blog_list.length}})</h3>
+            <hr/>
+            <ul class="list-group">
+
+                    <li  ng-repeat="nodeItem in blog_list" ng-click="getNid(nodeItem)" class="list-group-item">
+                      <div>{{ nodeItem.node_title }}</div>
+                    </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+          <h3>{{article.title}}</h3>
+            <hr ng-show="article.node_title.length > 0" />
+            <div ng-bind-html="article.body"></div>
+            <p>Last Updated: {{ article.last_updated * 1000 | date:'dd-MM-yyyy'}}</p>
+        </div>
+    </div>
+</div>

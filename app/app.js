@@ -11,27 +11,27 @@
         $stateProvider
             .state('home', {
                 url : '/home',
-                templateUrl : 'pages/bloglist.html',
+                templateUrl : 'app/assets/pages/bloglist.tpl.html',
                 controller  : 'BlogListController'
             })
             .state('blogs', {
                 url : '/blogs',
-                templateUrl : 'pages/bloglist.html',
+                templateUrl : 'app/BlogList/bloglist.tpl.html',
                 controller  : 'BlogListController'
             })
             .state('about', {
                 url : '/about',
-                templateUrl : 'pages/aboutme.html',
+                templateUrl : '../assets/pages/aboutme.html',
                 //controller  : 'aboutController'
             })
             .state('cv', {
                 url : '/cv',
-                templateUrl : 'pages/cv.html',
+                templateUrl : '../assets/pages/cv.html',
                 //controller  : 'cvController'
             })
             .state('contact', {
                 url : '/contact',
-                templateUrl : 'pages/contactme.html',
+                templateUrl : '../assets/pages/contactme.html',
                 //controller  : 'contactController'
             });
         }]);

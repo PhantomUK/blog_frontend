@@ -11,8 +11,9 @@
 
         var onBlogArticleComplete = function(data) {
             $scope.article = {
-                title: data.title,
-                body: $sce.trustAsHtml(data.body.und[0].value)
+                title: data[0].node_title,
+                body: $sce.trustAsHtml(data[0].Body),
+                last_updated: data[0].node_changed
             }
         };
 
